@@ -69,10 +69,10 @@
         /* Timeline PC (Base) */
         .timeline { position: relative; max-width: 1000px; margin: 0 auto; }
         
-        /* CORRECTION ICI : Ajout de z-index: 0 pour mettre la ligne au fond */
+        /* Z-INDEX 0 POUR LA LIGNE (Correction superposition) */
         .timeline::after { content: ''; position: absolute; width: 4px; background: linear-gradient(to bottom, var(--primary), var(--primary-dark)); top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px; z-index: 0; }
         
-        /* CORRECTION ICI : Ajout de z-index: 1 pour mettre la carte devant la ligne */
+        /* Z-INDEX 1 POUR LA CARTE (Correction superposition) */
         .card { padding: 2rem; background-color: white; position: relative; border-radius: 16px; width: 45%; box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1); margin-bottom: 3rem; border: 1px solid rgba(37, 99, 235, 0.1); transition: 0.3s; z-index: 1; }
         
         .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15); border-color: var(--primary); }
