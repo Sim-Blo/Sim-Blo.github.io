@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Conditions Générales de Vente | Simon Blondeel">
+    <main class="pt-32 pb-24 px-4 max-w-4xl mx-auto text-slate-300 leading-relaxed">
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Conditions Générales de Vente</h1>
+        <p class="text-slate-500 mb-12">Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}</p>
+        
+        <div class="space-y-12">
+            
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 1 : Champ d'application</h2>
+                <p>
+                    Les présentes Conditions Générales de Vente (CGV) s'appliquent à toutes les prestations de services conclues par <strong>Simon Blondeel</strong> (ci-après "le Prestataire") auprès de ses clients professionnels ou particuliers (ci-après "le Client").
+                    Elles concernent la création de sites internet, la maintenance web et toute autre prestation connexe. Toute commande implique l'adhésion sans réserve du Client aux présentes CGV.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 2 : Commandes et Devis</h2>
+                <p>
+                    Chaque prestation fait l'objet d'un devis gratuit, valable 30 jours. La commande n'est validée qu'après :
+                </p>
+                <ul class="list-disc pl-6 mt-2 space-y-2">
+                    <li>La signature du devis avec la mention "Bon pour accord".</li>
+                    <li>Le versement d'un acompte de 30% du montant total (pour les prestations en "One-Shot") ou le paiement des frais de mise en service (pour les abonnements).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 3 : Tarifs et Paiement</h2>
+                <p class="mb-4">
+                    Les prix sont libellés en euros et hors taxes (TVA non applicable, art. 293 B du CGI, sauf si vous êtes assujetti).
+                </p>
+                
+                <h3 class="text-lg font-bold text-white mt-4 mb-2">3.1. Prestation "One-Shot" (Achat)</h3>
+                <p>
+                    Le paiement s'effectue en deux temps : 30% à la commande (acompte) et le solde (70%) à la livraison du site.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mt-4 mb-2">3.2. Prestation "Abonnement" (Site as a Service)</h3>
+                <p>
+                    Le Client s'engage sur une durée minimale de 12 mois. Le paiement s'effectue par prélèvement mensuel automatique. En cas de défaut de paiement, le Prestataire se réserve le droit de suspendre l'accès au site internet 15 jours après une relance restée infructueuse.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mt-4 mb-2">3.3. Retard de paiement</h3>
+                <p>
+                    Tout retard de paiement entraînera l'exigibilité de pénalités de retard à un taux égal à 3 fois le taux d'intérêt légal en vigueur, ainsi qu'une indemnité forfaitaire de 40€ pour frais de recouvrement.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 4 : Engagements du Client</h2>
+                <p>
+                    Le Client s'engage à fournir au Prestataire tous les éléments nécessaires à la réalisation du site (textes, images, logos) dans les délais convenus. Tout retard dans la transmission de ces éléments entraînera un report de la date de livraison, sans que le Prestataire ne puisse être tenu pour responsable.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 5 : Livraison et Délais</h2>
+                <p>
+                    Les délais de livraison indiqués sur le devis sont donnés à titre indicatif. Le Prestataire s'engage à tout mettre en œuvre pour respecter ces délais. Un retard raisonnable ne peut justifier l'annulation de la commande ni donner lieu à des dommages et intérêts.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 6 : Propriété Intellectuelle</h2>
+                
+                <h3 class="text-lg font-bold text-white mt-4 mb-2">6.1. Cas de la Vente "One-Shot"</h3>
+                <p>
+                    Le transfert de propriété du site et de son code source s'effectue <strong>uniquement après le paiement intégral</strong> de la facture. Jusqu'à ce paiement complet, le Prestataire reste propriétaire des droits d'auteur.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mt-4 mb-2">6.2. Cas de l'Abonnement</h3>
+                <p>
+                    Dans le cadre de l'offre par abonnement, le Prestataire reste l'unique propriétaire du site, du code, du design et des accès hébergement. Le Client dispose d'un droit d'usage tant que l'abonnement est actif. En cas de résiliation, le site sera mis hors ligne et le Client ne pourra prétendre à la récupération des fichiers sources, sauf accord commercial spécifique de rachat.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 7 : Garantie et Responsabilité</h2>
+                <p>
+                    Le Prestataire est soumis à une obligation de moyens. Sa responsabilité ne saurait être engagée en cas de piratage informatique, de panne de l'hébergeur tiers ou de baisse de référencement.
+                    Une garantie de correction des bugs techniques est incluse pendant 30 jours après la livraison. Au-delà, toute intervention sera facturée ou nécessitera un contrat de maintenance.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 8 : Résiliation</h2>
+                <p>
+                    Pour l'offre Abonnement : Après la période d'engagement initiale de 12 mois, le contrat est renouvelé par tacite reconduction. Le Client peut résilier son abonnement à tout moment par lettre recommandée avec un préavis de 1 mois.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="text-2xl font-bold text-white mb-4">Article 9 : Droit applicable</h2>
+                <p>
+                    Les présentes CGV sont soumises au droit français. En cas de litige, et à défaut d'accord amiable, compétence exclusive est attribuée aux tribunaux compétents du lieu du siège social du Prestataire.
+                </p>
+            </article>
+
+        </div>
+    </main>
+</Layout>

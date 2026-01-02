@@ -1,0 +1,48 @@
+---
+// src/components/Portfolio.astro
+---
+<section id="portfolio" class="py-24 bg-slate-950 relative border-t border-slate-900">
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="mb-16 md:flex md:justify-between md:items-end">
+            <div class="max-w-2xl text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Réalisations <span class="text-blue-500">récentes</span>.
+                </h2>
+                <p class="text-slate-400">
+                    Des solutions web concrètes, rapides et optimisées. Voici mes derniers déploiements.
+                </p>
+            </div>
+            <a href="/#contact" class="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                Lancer votre projet
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500">
+                <a href="https://quickqr.fr" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/quickqr.png" alt="QuickQR" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                    </div>
+                    <div class="p-8 text-left">
+                        <h3 class="text-2xl font-bold text-white mb-3">QuickQR.fr</h3>
+                        <p class="text-slate-400">Générateur de QR codes haute performance.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500">
+                <a href="https://bastianlering.simon-blondeel59.workers.dev/" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/lering.png" alt="Bastian Lering" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                    </div>
+                    <div class="p-8 text-left">
+                        <h3 class="text-2xl font-bold text-white mb-3">Bastian Lering</h3>
+                        <p class="text-slate-400">Portfolio moderne sur Cloudflare Workers.</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
