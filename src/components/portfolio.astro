@@ -1,6 +1,12 @@
 ---
 // src/components/Portfolio.astro
+import { Image } from 'astro:assets';
+
+// On importe les images pour qu'Astro puisse les optimiser au build
+import imgQuickQR from '../assets/quickqr.webp';
+import imgLering from '../assets/lering.webp';
 ---
+
 <section id="portfolio" class="py-24 bg-slate-950 relative border-t border-slate-900">
     <div class="max-w-6xl mx-auto px-4">
         
@@ -20,10 +26,18 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Premier Projet */}
             <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500">
                 <a href="https://quickqr.fr" target="_blank" rel="noopener noreferrer" class="block">
                     <div class="h-64 overflow-hidden relative">
-                        <img src="/quickqr.png" alt="QuickQR" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                        <Image 
+                            src={imgQuickQR} 
+                            alt="Interface de QuickQR" 
+                            width={800} 
+                            height={450}
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            loading="eager" 
+                        />
                     </div>
                     <div class="p-8 text-left">
                         <h3 class="text-2xl font-bold text-white mb-3">QuickQR.fr</h3>
@@ -32,10 +46,18 @@
                 </a>
             </article>
 
+            {/* Deuxième Projet */}
             <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500">
                 <a href="https://bastianlering.simon-blondeel59.workers.dev/" target="_blank" rel="noopener noreferrer" class="block">
                     <div class="h-64 overflow-hidden relative">
-                        <img src="/lering.png" alt="Bastian Lering" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                        <Image 
+                            src={imgLering} 
+                            alt="Aperçu du site Bastian Lering" 
+                            width={800} 
+                            height={450}
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            loading="lazy" 
+                        />
                     </div>
                     <div class="p-8 text-left">
                         <h3 class="text-2xl font-bold text-white mb-3">Bastian Lering</h3>
