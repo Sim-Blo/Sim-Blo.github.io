@@ -1,0 +1,32 @@
+---
+const steps = [
+  {
+    title: "1. Stratégie",
+    desc: "On définit vos besoins et l'objectif de votre site lors d'un premier échange."
+  },
+  {
+    title: "2. Création",
+    desc: "Je développe votre site sur mesure avec un focus total sur la rapidité."
+  },
+  {
+    title: "3. Succès",
+    desc: "Mise en ligne, indexation Google et suivi de vos performances."
+  }
+];
+---
+
+<section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Une méthode simple, des résultats concrets</h2>
+        <p class="text-slate-400">Pas de jargon technique, je m'occupe de tout pour vous.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {steps.map(step => (
+            <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800/50 hover:border-blue-500/50 transition-colors">
+                <h3 class="text-xl font-bold text-blue-400 mb-3">{step.title}</h3>
+                <p class="text-slate-400 leading-relaxed">{step.desc}</p>
+            </div>
+        ))}
+    </div>
+</section>

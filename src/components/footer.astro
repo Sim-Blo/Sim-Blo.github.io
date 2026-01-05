@@ -3,48 +3,48 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-24 pb-12 relative overflow-hidden">
+<footer class="bg-slate-950 border-t border-slate-900 pt-16 pb-12 relative overflow-hidden">
     
-    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/5 blur-[100px] rounded-full pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-4 relative z-10">
         
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                Prêt à lancer votre projet ?
-            </h2>
-            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
-                Boostez votre activité grâce à votre site internet. <br>Discutons ensemble.
-            </p>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
             
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:simon.blondeel59@gmail.com" class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg transition-all shadow-lg shadow-blue-600/25">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
-                    M'envoyer un email
+            <div class="max-w-sm">
+                <span class="font-bold text-white text-2xl">Simon Blondeel<span class="text-blue-500">.</span></span>
+                <p class="text-slate-500 mt-3 leading-relaxed">
+                    Développeur web freelance spécialisé dans la création de sites haute performance pour artisans et professionnels.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <a href="tel:0625134756" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors group">
+                    <div class="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-blue-500/50 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                    </div>
+                    <span class="font-medium">06 25 13 47 56</span>
                 </a>
                 
-                <a href="#" class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white font-bold text-lg transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
-                    06 25 13 47 56
+                <a href="mailto:simon.blondeel59@gmail.com" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors group">
+                    <div class="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-blue-500/50 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                    </div>
+                    <span class="font-medium">simon.blondeel59@gmail.com</span>
                 </a>
             </div>
         </div>
 
-        <div class="border-t border-slate-900 my-12"></div>
+        <div class="border-t border-slate-900/50 my-12"></div>
 
-        <div class="flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-            <div class="mb-4 md:mb-0">
-                <span class="font-bold text-white text-lg">Simon Blondeel<span class="text-blue-500">.</span></span>
-                <p class="mt-2">Développeur web freelance spécialisé performance.</p>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-xs md:text-sm">
+            <div class="order-2 md:order-1">
+                &copy; {currentYear} Simon Blondeel. Tous droits réservés.
             </div>
             
-            <div class="flex gap-8">
+            <div class="flex gap-8 order-1 md:order-2">
                 <a href="/mentions-legales" class="hover:text-blue-400 transition-colors">Mentions Légales</a>
                 <a href="/cgv" class="hover:text-blue-400 transition-colors">CGV</a>
-            </div>
-            
-            <div class="mt-4 md:mt-0">
-                &copy; {currentYear} Simon Blondeel. Tous droits réservés.
             </div>
         </div>
     </div>

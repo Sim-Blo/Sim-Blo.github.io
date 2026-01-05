@@ -3,6 +3,8 @@
 import Layout from '../layouts/layout.astro';
 import Pricing from '../components/pricing.astro';
 import Portfolio from '../components/portfolio.astro';
+import Features from '../components/features.astro';
+import Contact from '../components/contact.astro';
 ---
 
 <Layout title="Simon Blondeel | Développeur Web Freelance & Création de Sites">
@@ -10,7 +12,7 @@ import Portfolio from '../components/portfolio.astro';
         
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-		<section class="relative z-10 flex flex-col items-center pt-32 pb-12 px-4 text-center max-w-5xl mx-auto">
+		<section class="relative z-10 flex flex-col items-center pt-32 pb-16 px-4 text-center max-w-5xl mx-auto">
 			
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
 				Création de sites web <br class="hidden md:block" />
@@ -21,7 +23,7 @@ import Portfolio from '../components/portfolio.astro';
 
             <div class="max-w-3xl mb-10">
                 <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-                    Je conçois des sites internet <strong>conçus pour convertir vos prospects en clients:</strong>
+                    Je conçois des sites internet <strong>conçus pour convertir vos prospects en clients :</strong>
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-slate-400 text-sm md:text-base font-medium">
@@ -37,22 +39,14 @@ import Portfolio from '../components/portfolio.astro';
                         <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span>
                         Optimisé pour les mobiles
                     </span>
-                    <span class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span>
-                        Zéro abonnement caché
-                    </span>
-                    <span class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span>
-                        Hebergement fiable et sans risque
-                    </span>
                 </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12">
-				<a href="#portfolio" class="px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-lg shadow-blue-600/25">
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-16">
+				<a href="#portfolio" class="px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-lg shadow-blue-600/25 text-center">
 					Voir mes réalisations
 				</a>
-				<a href="#contact" class="px-8 py-4 rounded-lg bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white font-semibold transition-all">
+				<a href="#contact" class="px-8 py-4 rounded-lg bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white font-semibold transition-all text-center">
 					Discuter de mon projet
 				</a>
 			</div>
@@ -74,11 +68,15 @@ import Portfolio from '../components/portfolio.astro';
             </div>
 		</section>
 
-        <div id="portfolio" class="pt-12">
+        <div id="portfolio" class="pt-16">
             <Portfolio />
         </div>
 
+        <Features />
+
         <Pricing />
+
+        <Contact />
 
 	</main>
 </Layout>

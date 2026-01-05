@@ -1,0 +1,60 @@
+<section id="contact" class="py-20 px-4 max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Prêt à lancer votre projet ?</h2>
+    <p class="text-slate-400 mb-10">Parlons de vos besoins et voyons si nous sommes faits pour travailler ensemble.</p>
+
+    <form id="contact-form" class="grid grid-cols-1 gap-4 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" name="name" placeholder="Votre nom" required class="bg-slate-900 border border-slate-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none" />
+            <input type="email" name="email" placeholder="Votre email" required class="bg-slate-900 border border-slate-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none" />
+        </div>
+        <textarea name="message" placeholder="Votre projet en quelques mots..." rows="4" required class="bg-slate-900 border border-slate-800 rounded-lg p-3 text-white focus:border-blue-500 outline-none"></textarea>
+        
+        <button type="submit" id="submit-btn" class="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-all shadow-lg shadow-blue-600/20">
+            Envoyer ma demande
+        </button>
+    </form>
+
+    <div id="success-message" class="hidden mt-6 p-6 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-emerald-400">
+        <p class="font-bold text-lg">Message envoyé !</p>
+        <p>Merci Simon, je reviens vers vous sous 24h à 48h.</p>
+    </div>
+</section>
+
+<script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const successMsg = document.getElementById('success-message');
+
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // On change l'état du bouton
+        btn.disabled = true;
+        btn.innerText = "Envoi en cours...";
+
+        const formData = new FormData(form);
+        
+        try {
+            const response = await fetch('https://formspree.io/f/mykzornq', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.classList.add('hidden'); // On cache le formulaire
+                successMsg?.classList.remove('hidden'); // On montre le succès
+            } else {
+                alert("Oups ! Il y a eu un problème. Réessayez ou contactez-moi directement.");
+                btn.disabled = false;
+                btn.innerText = "Envoyer ma demande";
+            }
+        } catch (error) {
+            alert("Erreur réseau. Vérifiez votre connexion.");
+            btn.disabled = false;
+            btn.innerText = "Envoyer ma demande";
+        }
+    });
+</script>
