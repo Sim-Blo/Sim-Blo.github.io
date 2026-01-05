@@ -1,15 +1,12 @@
 ---
 // src/components/Portfolio.astro
 import { Image } from 'astro:assets';
-
-// On importe les images pour qu'Astro puisse les optimiser au build
 import imgQuickQR from '../assets/quickqr.webp';
 import imgLering from '../assets/lering.webp';
 ---
 
 <section id="portfolio" class="py-24 bg-slate-950 relative border-t border-slate-900">
     <div class="max-w-6xl mx-auto px-4">
-        
         <div class="mb-16 md:flex md:justify-between md:items-end">
             <div class="max-w-2xl text-left">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -19,49 +16,45 @@ import imgLering from '../assets/lering.webp';
                     Des solutions web concrètes, rapides et optimisées. Voici mes derniers déploiements.
                 </p>
             </div>
-            <a href="/#contact" class="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+            <a href="#contact" class="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium">
                 Lancer votre projet
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Premier Projet */}
-            <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500">
+            {/* Projet 1 */}
+            <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10">
                 <a href="https://quickqr.fr" target="_blank" rel="noopener noreferrer" class="block">
-                    <div class="h-64 overflow-hidden relative">
-                        <Image 
-                            src={imgQuickQR} 
-                            alt="Interface de QuickQR" 
-                            width={800} 
-                            height={450}
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                            loading="eager" 
-                        />
+                    <div class="h-72 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+                            <span class="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            </span>
+                        </div>
+                        <Image src={imgQuickQR} alt="Interface de QuickQR" width={800} height={450} class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="eager" />
                     </div>
                     <div class="p-8 text-left">
-                        <h3 class="text-2xl font-bold text-white mb-3">QuickQR.fr</h3>
-                        <p class="text-slate-400">Générateur de QR codes haute performance.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">QuickQR.fr</h3>
+                        <p class="text-slate-400">Générateur de QR codes haute performance pour restaurateurs.</p>
                     </div>
                 </a>
             </article>
 
-            {/* Deuxième Projet */}
-            <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500">
+            {/* Projet 2 */}
+            <article class="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10">
                 <a href="https://bastianlering.simon-blondeel59.workers.dev/" target="_blank" rel="noopener noreferrer" class="block">
-                    <div class="h-64 overflow-hidden relative">
-                        <Image 
-                            src={imgLering} 
-                            alt="Aperçu du site Bastian Lering" 
-                            width={800} 
-                            height={450}
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                            loading="lazy" 
-                        />
+                    <div class="h-72 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+                            <span class="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            </span>
+                        </div>
+                        <Image src={imgLering} alt="Aperçu du site Bastian Lering" width={800} height={450} class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                     </div>
                     <div class="p-8 text-left">
-                        <h3 class="text-2xl font-bold text-white mb-3">Bastian Lering</h3>
-                        <p class="text-slate-400">Site pour une salle de boxe située à Saint-Omer (62).</p>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Bastian Lering</h3>
+                        <p class="text-slate-400">Site vitrine optimisé pour une salle de boxe (Saint-Omer).</p>
                     </div>
                 </a>
             </article>
