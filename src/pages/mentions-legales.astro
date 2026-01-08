@@ -2,18 +2,18 @@
 import Layout from '../layouts/layout.astro'; 
 ---
 
-<Layout title="Mentions Légales | Simon">
+<Layout title="Mentions Légales | Simon Blondeel">
     <main class="pt-32 pb-24 px-4 max-w-4xl mx-auto text-slate-300">
-        <h1 class="text-4xl font-bold text-white mb-8">Mentions Légales</h1>
+        <h1 class="text-4xl font-bold text-white mb-8 italic">Mentions Légales</h1>
         
-        <div class="space-y-8">
-            <section>
+        <div class="space-y-8 leading-relaxed">
+            <section class="bg-slate-900/30 p-6 rounded-2xl border border-slate-800">
                 <h2 class="text-2xl font-bold text-white mb-4">1. Éditeur du site</h2>
                 <p>
-                    Le site est édité par <strong>Simon Blondeel</strong>, développeur indépendant.<br>
-                    Adresse : 58 Avenue Jean Jaurès 92190 Meudon<br>
+                    Le site <strong>simonblondeel.fr</strong> est édité par <strong>Simon Blondeel</strong>, Entrepreneur Individuel (EI).<br>
+                    Siège social : 58 Avenue Jean Jaurès, 92190 Meudon, France<br>
                     Email : contact@simonblondeel.fr<br>
-                    SIRET : 1234567891234
+                    SIRET : 123 456 789 12345 (En cours d'immatriculation / À compléter)
                 </p>
             </section>
 
@@ -22,7 +22,6 @@ import Layout from '../layouts/layout.astro';
                 <p>
                     Le site est hébergé par <strong>Cloudflare Inc.</strong><br>
                     Siège social : 101 Townsend St, San Francisco, CA 94107, USA<br>
-                    Contact : +1 (650) 319-8930<br>
                     Site web : <a href="https://www.cloudflare.com" class="text-blue-400 hover:underline">www.cloudflare.com</a>
                 </p>
             </section>
@@ -30,14 +29,28 @@ import Layout from '../layouts/layout.astro';
             <section>
                 <h2 class="text-2xl font-bold text-white mb-4">3. Propriété intellectuelle</h2>
                 <p>
-                    L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés. Toute extraction et/ou reproduction de tout ou partie des informations diffusées sur le site est interdite sans autorisation préalable.
+                    L'ensemble de ce site (structure, textes, logos, photos) relève de la législation française et internationale sur le droit d'auteur. Tous les droits de reproduction sont réservés. Sauf mention contraire, les projets présentés dans le portfolio restent la propriété de leurs auteurs respectifs ou de Simon Blondeel.
                 </p>
             </section>
 
+            <section class="bg-slate-900/30 p-6 rounded-2xl border border-slate-800">
+                <h2 class="text-2xl font-bold text-white mb-4">4. Protection des données (RGPD)</h2>
+                <p class="mb-4">
+                    Conformément au Règlement Général sur la Protection des Données (RGPD), Simon Blondeel s'engage à ce que la collecte et le traitement de vos données soient transparents :
+                </p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Collecte :</strong> Seules les données saisies via le formulaire (Nom, Email, Message) sont collectées.</li>
+                    <li><strong>Finalité :</strong> Ces données servent exclusivement au traitement de votre demande de devis ou d'information.</li>
+                    <li><strong>Conservation :</strong> Les données sont conservées le temps nécessaire à la relation commerciale.</li>
+                    <li><strong>Sous-traitant :</strong> Le formulaire est géré par le service <strong>Formspree.io</strong>, qui respecte les standards de sécurité RGPD.</li>
+                    <li><strong>Vos droits :</strong> Vous pouvez demander l'accès, la modification ou la suppression de vos données en écrivant à : <span class="text-blue-400">contact@simonblondeel.fr</span>.</li>
+                </ul>
+            </section>
+
             <section>
-                <h2 class="text-2xl font-bold text-white mb-4">4. Données personnelles</h2>
+                <h2 class="text-2xl font-bold text-white mb-4">5. Tarifs et Offres</h2>
                 <p>
-                    Conformément au RGPD, ce site ne collecte aucune donnée personnelle à l'insu de l'utilisateur. Les informations envoyées via le formulaire de contact sont uniquement utilisées pour répondre à votre demande.
+                    Les tarifs mentionnés sur le site sont indicatifs et ne constituent pas un engagement contractuel. Chaque prestation fait l'objet d'un devis détaillé et de l'acceptation des Conditions Générales de Vente (CGV).
                 </p>
             </section>
         </div>
